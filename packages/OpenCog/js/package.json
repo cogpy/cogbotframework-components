@@ -1,0 +1,65 @@
+{
+  "name": "@microsoft/bot-components-opencog",
+  "version": "1.0.0",
+  "description": "OpenCog autonomous orchestrator for cognitive synergy architecture in Bot Framework",
+  "keywords": [
+    "microsoft",
+    "bot",
+    "framework",
+    "adaptive",
+    "msbot-component",
+    "msbot-content",
+    "opencog",
+    "cognitive",
+    "orchestrator",
+    "autogenesis",
+    "synergy"
+  ],
+  "license": "MIT",
+  "author": "Bot Framework",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib",
+    "exported",
+    "src"
+  ],
+  "homepage": "https://github.com/Microsoft/botframework-components/tree/main/packages/OpenCog",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microsoft/botframework-components.git"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "clean": "rimraf lib tsconfig.tsbuildinfo",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "dependencies": {
+    "botbuilder": "^4.20.0",
+    "botbuilder-dialogs": "^4.20.0",
+    "botbuilder-dialogs-adaptive": "^4.20.0",
+    "adaptive-expressions": "^4.20.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-plugin-import": "^2.27.0",
+    "eslint-plugin-n": "^15.6.0",
+    "eslint-plugin-promise": "^6.1.0",
+    "jest": "^29.5.0",
+    "rimraf": "^4.4.0",
+    "ts-jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

@@ -1,0 +1,69 @@
+{
+    "$schema": "https://schemas.botframework.com/schemas/component/v1.0/component.schema",
+    "$role": "implements(Microsoft.Bot.Builder.Dialogs.IDialog)",
+    "title": "Create Synergy Network",
+    "description": "Creates a new cognitive synergy network within the OpenCog orchestrator for autonomous component coordination.",
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string",
+            "title": "Id",
+            "description": "Optional dialog ID."
+        },
+        "disabled": {
+            "$ref": "schema:#/definitions/booleanExpression",
+            "title": "Disabled",
+            "description": "Optional condition which if true will disable this action.",
+            "examples": [
+                "user.age > 3"
+            ]
+        },
+        "networkName": {
+            "$ref": "schema:#/definitions/stringExpression",
+            "title": "Network Name",
+            "description": "Name of the synergy network to create. If not provided, a default name will be generated.",
+            "examples": [
+                "MainCognitiveNetwork",
+                "=concat('Network_', formatDateTime(utcNow(), 'yyyyMMddHHmmss'))"
+            ]
+        },
+        "synergyThreshold": {
+            "$ref": "schema:#/definitions/numberExpression",
+            "title": "Synergy Threshold",
+            "description": "Threshold value for detecting cognitive emergence (0.0 to 1.0).",
+            "default": 0.7,
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "examples": [
+                0.7,
+                "=user.synergyPreference"
+            ]
+        },
+        "learningRate": {
+            "$ref": "schema:#/definitions/numberExpression",
+            "title": "Learning Rate",
+            "description": "Learning rate for the cognitive network adaptation (0.0 to 1.0).",
+            "default": 0.1,
+            "minimum": 0.0,
+            "maximum": 1.0,
+            "examples": [
+                0.1,
+                "=conversation.learningRate"
+            ]
+        },
+        "resultProperty": {
+            "$ref": "schema:#/definitions/stringExpression",
+            "title": "Result Property",
+            "description": "Property path to store the created network ID.",
+            "default": "dialog.networkId",
+            "examples": [
+                "dialog.networkId",
+                "conversation.cognitiveNetworkId"
+            ]
+        }
+    },
+    "additionalProperties": false,
+    "$policies": {
+        "interactive": false
+    }
+}
