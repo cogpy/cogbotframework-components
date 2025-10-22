@@ -564,7 +564,7 @@ namespace Microsoft.Bot.Components.OpenCog
                 var weakLink = network.Links.Values.Where(l => l.Strength < 0.3).OrderBy(l => l.Strength).FirstOrDefault();
                 if (weakLink != null)
                 {
-                    network.Links.TryRemove(weakLink.Id, out _);
+                    network.Links.Remove(weakLink.Id);
                 }
             }
         }

@@ -371,7 +371,7 @@ namespace Microsoft.Bot.Components.OpenCog
             
             foreach (var link in weakLinks)
             {
-                network.Links.TryRemove(link.Id, out _);
+                network.Links.Remove(link.Id);
                 _logger.LogDebug("Pruned weak link: {LinkId}", link.Id);
             }
         }

@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <PackageId>Microsoft.Bot.Components.OpenCog</PackageId>
     <AssemblyName>Microsoft.Bot.Components.OpenCog</AssemblyName>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
@@ -17,6 +17,9 @@
     <RepositoryUrl>https://github.com/Microsoft/botframework-components</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+    <NoWarn>$(NoWarn);SA1412;SA1402;SA1116;SA1117;SA1513;SA1108;SA1119;SA1407;SA1623;SA1201;SA1516;SA1500;CA1001;CA2227;CS1998</NoWarn>
   </PropertyGroup>
 
   <ItemGroup>
